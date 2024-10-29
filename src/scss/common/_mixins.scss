@@ -1,0 +1,113 @@
+// @mixin neumorphism(
+//     $mode: 'concave',
+//     $bg-color: #e0e0e0,
+//     $light-source: 135deg,
+//     $offset: 8px,
+//     $blur-radius: 16px,
+//     $spread-radius: 0px,
+//     $intensity: 0.2
+// ) {
+//     $shadow-color: darken($bg-color, $intensity * 100%);
+//     $highlight-color: lighten($bg-color, $intensity * 100%);
+
+//     background-color: $bg-color;
+
+//     @if $mode == 'flat' {
+//         box-shadow: none;
+//     } @else if $mode == 'inset' {
+//         box-shadow:
+//             inset $offset $offset $blur-radius $spread-radius $shadow-color,
+//             inset -$offset -$offset $blur-radius $spread-radius $highlight-color;
+//     } @else {
+//         $rad: ($light-source - 90deg) * 1rad / 1deg;
+
+//         $x-offset: cos($rad) * $offset;
+//         $y-offset: sin($rad) * $offset;
+
+//         $x-offset-neg: -$x-offset;
+//         $y-offset-neg: -$y-offset;
+
+//         @if $mode == 'concave' {
+//             box-shadow:
+//                 inset $x-offset $y-offset $blur-radius $spread-radius $shadow-color,
+//                 inset $x-offset-neg $y-offset-neg $blur-radius $spread-radius $highlight-color;
+//         } @else if $mode == 'convex' {
+//             box-shadow:
+//                 $x-offset $y-offset $blur-radius $spread-radius $shadow-color,
+//                 $x-offset-neg $y-offset-neg $blur-radius $spread-radius $highlight-color;
+//         }
+//     }
+// }
+
+$breakpoints: (
+    xs: 0px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+@mixin respond-above($breakpoint) {
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Get the breakpoint value.
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        // Write the media query.
+        @media (min-width: $breakpoint-value) {
+            @content;
+        }
+
+        // If the breakpoint doesn't exist in the map.
+    } @else {
+        // Log a warning.
+        @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+}
+
+@mixin respond-below($breakpoint) {
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Get the breakpoint value.
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        // Write the media query.
+        @media (max-width: ($breakpoint-value - 1)) {
+            @content;
+        }
+
+        // If the breakpoint doesn't exist in the map.
+    } @else {
+        // Log a warning.
+        @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+}
+
+@mixin respond-between($lower, $upper) {
+    // If both the lower and upper breakpoints exist in the map.
+    @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+        // Get the lower and upper breakpoints.
+        $lower-breakpoint: map-get($breakpoints, $lower);
+        $upper-breakpoint: map-get($breakpoints, $upper);
+
+        // Write the media query.
+        @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+            @content;
+        }
+
+        // If one or both of the breakpoints don't exist.
+    } @else {
+        // If lower breakpoint is invalid.
+        @if (map-has-key($breakpoints, $lower) ==false) {
+            // Log a warning.
+            @warn 'Your lower breakpoint was invalid: #{$lower}.';
+        }
+
+        // If upper breakpoint is invalid.
+        @if (map-has-key($breakpoints, $upper) ==false) {
+            // Log a warning.
+            @warn 'Your upper breakpoint was invalid: #{$upper}.';
+        }
+    }
+}

@@ -1,0 +1,177 @@
+.header-firstrow{
+    .login-btn{
+        border-radius: 9999px;
+        background: $color-white;
+        box-shadow: -3px 3px 6px 0px rgba(201, 198, 202, 0.20), 3px -3px 6px 0px rgba(201, 198, 202, 0.20), -3px -3px 6px 0px rgba(255, 255, 255, 0.90), 3px 3px 8px 0px rgba(201, 198, 202, 0.90), 1px 1px 2px 0px rgba(255, 255, 255, 0.30) inset, -1px -1px 2px 0px rgba(201, 198, 202, 0.50) inset;
+        padding: 6px var(----padding-y-md, 12px);
+        color: $color-purple;
+        text-align: center;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        text-decoration: none;
+        gap: 6px;
+        display: flex;
+        align-items: center;
+        align-self: center;
+    }
+    .usermenu{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        &.visible{
+            max-height: 200px;
+        }
+    }
+    .fkcart-shortcode-count{
+        position: absolute;
+        top: 3px !important;
+        right: -19px !important;
+        min-width: 18px !important;
+        width: 20px !important;
+        height: 20px !important;
+        display: flex;
+        -js-display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--fkcart-toggle-count-bg-color);
+        border-radius: 100%;
+        color: var(--fkcart-toggle-count-font-color);
+        z-index: 20;
+        font-weight: 400;
+        font-size: 14px !important;
+        line-height: 10px;
+        box-sizing: border-box;
+        padding: 2px;
+    }
+    .header-first{
+        display: flex;
+    }
+    .wp-block-search{
+        flex: 1;
+
+        .wp-block-search__inside-wrapper{
+            width: 100% !important;
+            border: none;
+            .wp-block-search__input{
+                border-radius: 9999px;
+                background: var(--Grays-White, #FFF);
+                box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.30), -1px -1px 2px 0px rgba(230, 230, 230, 0.50), -5px 5px 10px 0px rgba(230, 230, 230, 0.20) inset, 5px -5px 10px 0px rgba(230, 230, 230, 0.20) inset, -5px -5px 10px 0px rgba(255, 255, 255, 0.90) inset, 5px 5px 13px 0px rgba(230, 230, 230, 0.90) inset;
+            }
+            .wp-block-search__button{
+                padding: 0;
+                color: $color-purple;
+                background-color: transparent;
+                transform: scaleX(-1);
+                margin-left: -40px;
+            }
+        }
+    }
+    .kivansaglista {
+        background-image: url('data:image/svg+xml,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 24 25%22 fill%3D%22none%22%3E%3Cpath d%3D%22M12 21.2375C12 21.2375 2.25 15.9875 2.25 9.8C2.25 8.45734 2.78337 7.16967 3.73277 6.22027C4.68217 5.27087 5.96984 4.7375 7.3125 4.7375C9.43031 4.7375 11.2444 5.89156 12 7.7375C12.7556 5.89156 14.5697 4.7375 16.6875 4.7375C18.0302 4.7375 19.3178 5.27087 20.2672 6.22027C21.2166 7.16967 21.75 8.45734 21.75 9.8C21.75 15.9875 12 21.2375 12 21.2375Z%22 stroke%3D%22%237A3E85%22 stroke-width%3D%222%22 stroke-linecap%3D%22round%22 stroke-linejoin%3D%22round%22/%3E%3C/svg%3E');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 25px;
+        text-indent: -9999px;
+    }
+
+
+}
+
+.secondrow-menu{
+    margin-top: 10px;
+    border-top: 2px solid rgba(175, 152, 179, 0.10);
+    padding-top: 10px;
+
+    #modal-2 /*primarymenu*/
+    {
+        li{
+            a{
+                color: #000;
+                font-family: Lato;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-transform: uppercase;
+                padding: 9px var(----border-radius-md, 15px);
+
+                &:hover{
+                    border-radius: 9999px;
+                    padding: 9px var(----border-radius-md, 15px);
+                    justify-content: center;
+                    align-items: center;
+                    gap: var(----padding-y-sm, 10px);
+                    background: $color-purple-hover;
+                    color: #fff;
+                }
+            }
+            &.current-menu-item{
+                a{
+                    border-radius: 9999px;
+                    padding: 9px var(----border-radius-md, 15px);
+                    justify-content: center;
+                    align-items: center;
+                    gap: var(----padding-y-sm, 10px);
+                    background: $color-purple-hover;
+                    color: #fff;
+                }
+            }
+            &:after{
+                content: '';
+                display: inline-block;
+                width: 1px;
+                height: 6px;
+                background: $color-purple-gray;
+            }
+            &:last-child{
+                &::after{
+                    content: none;
+                }
+            }
+        }
+    }
+    .secondarymenu{
+        nav{
+            display: flex;
+            gap: 30px;
+            .learazasok
+            {
+                a{
+                    display: flex;
+                    text-align: center;
+                    font-family: Lato;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 20px;
+                    text-transform: uppercase;
+                    color: $color-purple !important;
+                    &:before{
+                        background-image: url('data:image/svg+xml,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%2218%22 height%3D%2219%22 viewBox%3D%220 0 18 19%22 fill%3D%22none%22%3E%3Cpath d%3D%22M14.0625 4.4125L3.9375 14.5375%22 stroke%3D%22%23FB6376%22 stroke-width%3D%222%22 stroke-linecap%3D%22round%22 stroke-linejoin%3D%22round%22/%3E%3Cpath d%3D%22M5.34375 7.7875C6.43106 7.7875 7.3125 6.90606 7.3125 5.81875C7.3125 4.73144 6.43106 3.85 5.34375 3.85C4.25644 3.85 3.375 4.73144 3.375 5.81875C3.375 6.90606 4.25644 7.7875 5.34375 7.7875Z%22 stroke%3D%22%23FB6376%22 stroke-width%3D%222%22 stroke-linecap%3D%22round%22 stroke-linejoin%3D%22round%22/%3E%3Cpath d%3D%22M12.6562 15.1C13.7436 15.1 14.625 14.2186 14.625 13.1312C14.625 12.0439 13.7436 11.1625 12.6562 11.1625C11.5689 11.1625 10.6875 12.0439 10.6875 13.1312C10.6875 14.2186 11.5689 15.1 12.6562 15.1Z%22 stroke%3D%22%23FB6376%22 stroke-width%3D%222%22 stroke-linecap%3D%22round%22 stroke-linejoin%3D%22round%22/%3E%3C/svg%3E');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 18px;
+                        height: 19px;
+                        display: inline-block;
+                        content: '';
+                    }
+                }
+            }
+            .evaschoice{
+                a{
+                    background: url('/wp-content/themes/generatepress_child/images/evaschoice.svg') 0 0 no-repeat;
+                    text-indent: -9999px;
+                    display: inline-block;
+                    width: 126px;
+                    height: 30px;
+                }
+            }
+        }
+
+    }
+
+}

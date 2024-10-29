@@ -1,0 +1,81 @@
+{
+    "folders": [
+        {
+            "name": "root",
+            "path": "..",
+        },
+        {
+            "name": "plugins",
+            "path": "../erawanpgnd.myplan.hu/wp-content/plugins",
+        },
+        {
+            "name": "theme",
+            "path": "../erawanpgnd.myplan.hu/wp-content/themes/generatepress_child",
+        },
+        {
+            "name": "src",
+            "path": "../src",
+        },
+    ],
+    "settings": {
+        // PHP Sniffer & Beautifier
+        "phpsab.standard": "WordPress",
+        "phpsab.fixerEnable": true,
+        "phpsab.snifferEnable": true,
+        "phpsab.snifferShowSources": true,
+        "phpsab.executablePathCBF": "/data/projects/tools/WordPress-Coding-Standards/vendor/squizlabs/php_codesniffer/bin/phpcbf",
+        "phpsab.executablePathCS": "/data/projects/tools/WordPress-Coding-Standards/vendor/squizlabs/php_codesniffer/bin/phpcs",
+        "phpsab.snifferArguments": ["--ignore=*/wp-admin/*,*/wp-includes/*"],
+
+        "[php]": {
+            "editor.defaultFormatter": "valeryanm.vscode-phpsab",
+            "editor.formatOnSave": true,
+        },
+        "[json]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[jsonc]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[html]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[css]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[scss]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[sass]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[javascript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[typescript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[javascriptreact]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[jsx]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[tsx]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[markdown]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "files.trimTrailingWhitespace": false,
+        },
+        "[yaml]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[graphql]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+    },
+    "extensions": {
+        "recommendations": ["esbenp.prettier-vscode", "valeryanm.vscode-phpsab"],
+    },
+}

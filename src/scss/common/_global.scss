@@ -1,0 +1,11 @@
+@mixin width-steps {
+    @for $i from 1 through 4 {
+        &-#{$i * 25} {
+            width: #{$i * 25 + '%'};
+        }
+    }
+}
+
+.w {
+    @include width-steps;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "erawan/theme",
+  "autoload": {
+    "psr-4": {
+      "Erawan\\": "includes/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Norbert Toth",
+      "email": "norbert@norbth.hu"
+    }
+  ],
+  "require": {
+  }
+}

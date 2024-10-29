@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["custom-login-modal.js"],"sourcesContent":["document.addEventListener('DOMContentLoaded', function () {\n    var loginModal = new HystModal({\n        linkAttributeName: 'data-hystmodal',\n    });\n});\n"],"file":"custom-login-modal.js"}
