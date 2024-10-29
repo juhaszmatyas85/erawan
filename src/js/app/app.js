@@ -1,7 +1,5 @@
-import { aaa } from './modules/aaa.js';
+import consoleLogAbout from './modules/console-log-about.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    alert('Hello App!');
-
-    aaa();
+    consoleLogAbout();
 });

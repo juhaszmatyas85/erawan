@@ -205,7 +205,7 @@ function deploy() {
         .on('end', () => console.log('Deployment completed successfully.'));
 }
 
-const js = gulp.series(adminScripts, publicScripts, vendorScripts);
+const js = gulp.series(adminScripts, publicScripts, appScripts, vendorScripts);
 const build = gulp.series(js, styles, copyVendorFiles);
 const serve = gulp.parallel(watchFiles, browserSyncServe);
 function watch() {
