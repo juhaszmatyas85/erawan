@@ -33,6 +33,7 @@ composer.phar
 **/composer.phar
 /vendor/
 **/vendor/
+!src/**/vendor
 
 # WP-CLI
 wp-cli.local.yml
