@@ -14,10 +14,9 @@ class StyleLoader {
 			'enqueue' => true,
 		),
 		'hystmodal' => array(
-			'path'    => 'css/vendor/hystmodal.css',
-			'deps'    => array(),
-			'media'   => 'all',
-			'enqueue' => true,
+			'path'  => 'css/vendor/hystmodal.css',
+			'deps'  => array(),
+			'media' => 'all',
 		),
 	);
 
@@ -36,12 +35,12 @@ class StyleLoader {
 				wp_register_style(
 					$handle,
 					ERAWAN_URL . $style['path'],
-					$style['deps'],
+					$style['deps'] ?? array(),
 					filemtime( $file_path ),
-					$style['media']
+					$style['media'] ?? 'all'
 				);
 
-				if ( $style['enqueue'] ) {
+				if ( isset( $style['enqueue'] ) && $style['enqueue'] ) {
 					wp_enqueue_style( $handle );
 				}
 			}

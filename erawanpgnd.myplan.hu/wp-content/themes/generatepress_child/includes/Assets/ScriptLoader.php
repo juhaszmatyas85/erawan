@@ -34,6 +34,11 @@ class ScriptLoader {
 			'deps'      => array( 'jquery', 'hystmodal' ),
 			'in_footer' => true,
 		),
+		'slick' => array(
+			'path'      => 'js/vendor/slick.js',
+			'deps'      => array( 'jquery'),
+			'in_footer' => true,
+		),
 	);
 
 	public function __construct( Container $container, Loader $loader ) {

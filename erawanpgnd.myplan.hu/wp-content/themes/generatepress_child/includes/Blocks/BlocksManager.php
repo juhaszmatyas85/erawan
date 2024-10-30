@@ -45,6 +45,15 @@ class BlocksManager {
 					'styles'  => array( 'hystmodal' ),
 				),
 			),
+			'slider' => array(
+				'title'       => 'Slick slider',
+				'description' => 'Slick slider',
+				'icon'        => 'slides',
+				'assets'      => array(
+					'scripts' => array( 'slick'),
+					'styles'  => array( 'slider'),
+				),
+			)
 		);
 
 		foreach ( $blocks as $block_name => $settings ) {
